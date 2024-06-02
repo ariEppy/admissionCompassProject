@@ -1,4 +1,4 @@
-To run our site-
+## To run our site-
 
 1. Download the admissioncompassdatabase sql file. Open up mysql workbench, and start a new connection. This will start a localhost for our database. Next, press file and click on "open sql script" and click on our admissioncompassdatabase file. Next, press "Execute the selected portion...". Click refresh under the schema list on the left hand panel and now we have our database ready to use with data.
 
@@ -9,6 +9,8 @@ To run our site-
 4. Next, open another terminal and and write npm install (enter), then, write npm run dev (enter), and now a localhost should appear with a link to your frontend website.
 
 5. Click on the link that just appeared and start exploring our website!
+
+## More Info
 
 Our site is seperated into 2 sections - Backend and Components/App.
 

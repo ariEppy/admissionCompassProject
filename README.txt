@@ -1,4 +1,4 @@
-## To run our site-
+## [To run our site:]
 
 1. Download the admissioncompassdatabase sql file. Open up mysql workbench, and start a new connection. This will start a localhost for our database. Next, press file and click on "open sql script" and click on our admissioncompassdatabase file. Next, press "Execute the selected portion...". Click refresh under the schema list on the left hand panel and now we have our database ready to use with data.
 
@@ -10,7 +10,7 @@
 
 5. Click on the link that just appeared and start exploring our website!
 
-## More Info
+## [More Info]
 
 Our site is seperated into 2 sections - Backend and Components/App.
 

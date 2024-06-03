@@ -271,7 +271,7 @@ const Form: React.FC = () => {
                     key={index}
                     onClick={() => handleResultClick1(result)}
                   >
-                    {result.Name} - {result.ID}
+                    {result.Name}
                   </div>
                 ))}
               </div>
@@ -291,7 +291,7 @@ const Form: React.FC = () => {
                     key={index}
                     onClick={() => handleResultClick2(result)}
                   >
-                    {result.Name} - {result.ID}
+                    {result.Name}
                   </div>
                 ))}
               </div>

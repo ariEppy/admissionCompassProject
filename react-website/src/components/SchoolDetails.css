@@ -4,48 +4,176 @@
   }
   
   /* Container for skill bars */
+  
+ 
   .container {
-    width: 100%; /* Full width */
-  }
-  
-  .skills {
-    text-align: right; /* Right-align text */
-    padding-top: 10px; /* Add top padding */
-    padding-bottom: 10px; /* Add bottom padding */
-  }
-  
-  .html .green-bar {
-    position: absolute;
-    top: 0;
+    position: relative;
+    background-color: #ddd;
+    width: 100%;
+    margin-top: 10px;
+}
+.skills.html .green-bar {
+    background-color: #04AA6D;
+    height: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    color: white;
+}
+  .circle-container {
+ 
+  width: 90%; 
   }
-  
-  .html .green-bar span {
-    font-size: 12px; /* Adjust as needed */
+  .circle-container2 {
+    display: flex;
+    align-items: center;
   }
+  .circle1 {
+    background-color: #4CAF50;
+    padding-top: 10px;
+    position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  color: white;
+  font-size: 16px; 
 
-  .outer {
-    display: flex;
-    background-color: #EFF1F5;
-    color: #080101;
+  }
+  .circle2 {
+    background-color: #5c4caf;
+    padding-top: 10px;
+    position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  align-items: center;
+  color: white;
+  font-size: 16px; 
+   
+  }
+  .circle3 {
+    background-color: #af4ca7;
+    padding-top: 10px;
+    position: relative;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px; 
+    
+  }
+  .circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .circle4 {
+    background-color: #af8b4c;
+    margin-top: 10px;
+    padding-top: 10px;
+    position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px; 
+    
+  }
+  .circle5 {
+    background-color: #aaaf4c;
+    padding-top: 10px;
+    margin-top: 10px;
+    position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px; 
+  }
+  .circle6 {
+    background-color: #af4c6f;
+    margin-top: 10px;
+    padding-top: 10px;
+    position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px; 
+  }
+  .resultsstrip
+  {
+    background-color: #006CA9;
+    height:50px;
+  }
+  .resultssmall
+  {
+    color:rgb(255, 255, 255);
     padding-left: 200px;
     padding-right: 200px;
-    padding-top: 70px;
-    padding-bottom: 150px;
+    padding-top: 15px;
+    
   }
-.outer4 {
-    background-color: #ffffff;
-    width: 1000px;
+  .resultsouter {
+    padding-left: 200px;
+    padding-right: 200px;
+    
+  }
+  .resultsouter2 {
+    padding-top: 50px;
+    font-size: 50px;
+    font-weight: 700;
+    color:#143056;
+    
+  }
+  .resultsouter3 {
    
-    margin-top: -150px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    color: #080101;
-  
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-between; 
+    color:#143056;
+   
+  }
 
-   
-  
+  .resultsouter5a {
+    display: flex;
+    width: 100%;
+    padding-right: 190px;
+    padding-left: 190px;
+    
   }
+  .resultsouter5 {
+   
+  flex: 1;  
+  }
+  .resultsouter4 {
+  width: 95%;
+    padding: 10px;
+   
+  }
+  .resultsouter4 p {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+
+  

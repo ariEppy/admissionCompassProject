@@ -8,7 +8,7 @@ from sklearn.tree import DecisionTreeClassifier
 # Load the dataset
 df = pd.read_csv('student_data_final_testing.csv')
 
-# Mapping dictionary for degree types
+# Mapping for degree types
 degree_mapping = {'B.Sc.': 1, 'M.Sc.': 2, 'B.A.': 3, 'M.A.': 4}  # Assign 0 to represent unknown types
 
 # Convert string values to numeric

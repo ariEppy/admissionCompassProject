@@ -500,7 +500,14 @@ WHERE
     res.json(results);
   });
 });
-
+app.get('/resultsInstitution/:id', (req, res) => {
+  let schoolID = req.params.id;
+  let sql = 'SELECT Name, Location, general_information FROM institution WHERE ID = ?';
+  db.query(sql, [schoolID], (err, results) => {
+    if (err) throw err;
+    res.json(results); 
+  });
+});
 app.get('/results1/:id', (req, res) => {
   let schoolID = req.params.id;
   let sql = 'SELECT ID, Name FROM institution WHERE ID = ?';
@@ -779,32 +786,6 @@ app.get('/institution', (req, res) => {
     });
   });
   
-  
-
-
-app.delete("/institution/:id", (req, res) => {
-    const id = req.params.id; // Extract ID from the URL parameters
-
-    // Construct the DELETE query
-    const q = "DELETE FROM institution WHERE ID = ?";
-    
-    // Execute the query with the specified ID
-    db.query(q, [id], (err, result) => {
-        if (err) {
-            console.error(err); 
-            return res.status(500).json({ error: "Failed to delete data from the database" });
-        }
-        
-        // Check if any rows were affected by the deletion
-        if (result.affectedRows === 0) {
-            return res.status(404).json({ error: "No matching entry found for deletion" });
-        }
-        
-        // Return success response
-        return res.status(200).json({ success: true });
-    });
-});
-
 
 app.listen(8800, () => {
     console.log("Connected to backend!!!");

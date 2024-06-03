@@ -167,7 +167,7 @@ const StudentUploadForm: React.FC = () => {
       deniedSchoolId: number;
     }[]
   >([{ degreeId: 0, Type: "", acceptedSchoolId: 0, deniedSchoolId: 0 }]);
-
+  const [submitResponse, setResponseText] = useState("");
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
   };
@@ -418,7 +418,7 @@ const StudentUploadForm: React.FC = () => {
     };
 
     try {
-      console.log("Submitting data:", data); // Debugging: log the data being submitted
+      console.log("Submitting data:", data);
       const response = await fetch("http://localhost:8800/submission", {
         method: "POST",
         headers: {
@@ -432,11 +432,10 @@ const StudentUploadForm: React.FC = () => {
       }
 
       const result = await response.json();
-      console.log("Response received:", result); // Debugging: log the response
-      // Handle successful submission here (e.g., display a success message)
+      console.log("Response received:", result);
+      setResponseText("Sent! Thank you so much");
     } catch (error) {
-      console.error("Error submitting form:", error); // Debugging: log the error
-      // Handle error here (e.g., display an error message)
+      console.error("Error submitting form:", error);
     }
   };
 
@@ -462,14 +461,13 @@ const StudentUploadForm: React.FC = () => {
                     value={email}
                     onChange={handleEmailChange}
                     placeholder=""
+                    required
                   />
                 </td>
               </tr>
             </tbody>
           </table>
-        </div>
 
-        <div className="bagrut">
           <table>
             <thead>
               <tr>
@@ -485,7 +483,6 @@ const StudentUploadForm: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              {/* Rows for Bagrut Scores */}
               <tr>
                 <td>English</td>
                 <td>
@@ -546,8 +543,7 @@ const StudentUploadForm: React.FC = () => {
                   </label>
                 </td>
               </tr>
-              {/* Repeat similar structure for other subjects */}
-              {/* Example for Math */}
+
               <tr>
                 <td>Math</td>
                 <td>
@@ -1179,8 +1175,7 @@ const StudentUploadForm: React.FC = () => {
           >
             Add Course
           </button>
-        </div>
-        <div className="bagrut">
+
           <table>
             <thead>
               <tr>
@@ -1288,8 +1283,10 @@ const StudentUploadForm: React.FC = () => {
             </button>
           )}
         </div>
-
-        <button type="submit">Search</button>
+        <div>
+          <button type="submit">Submit</button>
+          <p style={{ alignItems: "left" }}>{submitResponse}</p>
+        </div>
       </form>
     </div>
   );

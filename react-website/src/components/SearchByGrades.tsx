@@ -384,9 +384,8 @@ const SearchByGrades: React.FC = () => {
       Type: selectedType,
     };
     const jsonData = JSON.stringify(data);
-    console.log("Sending data:", jsonData); // Log the data sent to backend
+    console.log("Sending data:", jsonData);
 
-    // Fetch request to the Flask backend
     fetch(url, {
       headers: {
         Accept: "application/json",
@@ -397,7 +396,7 @@ const SearchByGrades: React.FC = () => {
     })
       .then((response) => response.json())
       .then((response) => {
-        console.log("Received response:", response); // Log the received response
+        console.log("Received response:", response);
         if (response.Prediction) {
           setResult(response.Prediction);
         } else {
@@ -432,7 +431,6 @@ const SearchByGrades: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              {/* Rows for Bagrut Scores */}
               <tr>
                 <td>English</td>
                 <td>
@@ -493,8 +491,7 @@ const SearchByGrades: React.FC = () => {
                   </label>
                 </td>
               </tr>
-              {/* Repeat similar structure for other subjects */}
-              {/* Example for Math */}
+
               <tr>
                 <td>Math</td>
                 <td>
@@ -1127,7 +1124,7 @@ const SearchByGrades: React.FC = () => {
             Add Course
           </button>
         </div>
-        <div>
+        <div className="selects">
           <label>
             <select value={selectedNameId} onChange={handleNameChange}>
               <option value="0">Select a school</option>
@@ -1139,7 +1136,7 @@ const SearchByGrades: React.FC = () => {
             </select>
           </label>
         </div>
-        <div>
+        <div className="selects">
           <label>
             <select value={selectedType} onChange={handleTypeChange}>
               <option value="0">Select a Type</option>
@@ -1151,7 +1148,7 @@ const SearchByGrades: React.FC = () => {
             </select>
           </label>
         </div>
-        <div>
+        <div className="selects">
           <label>
             <select value={selectedDegreeId} onChange={handleDegreeChange}>
               <option value="0">Select a field</option>

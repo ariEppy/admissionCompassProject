@@ -34,7 +34,9 @@
   flex-direction: column;
   gap: 20px; /* Adjust gap as needed */
 }
-
+.selects {
+  width:100%;
+}
 .result {
   display: flex;
   flex-wrap: wrap;
@@ -47,6 +49,10 @@
   padding: 10px;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  cursor: pointer;
+}
+.result-item:hover {
+  background-color: #cecece; 
 }
 
 .button-container {
@@ -207,7 +213,7 @@ form button {
 
   
   }
-  
+ 
   select {
     width: 300px;
     border-radius: 5px;
@@ -215,6 +221,7 @@ form button {
     padding: 15px;
     padding-left: 30px;
     text-align: left;
+   
     
   }
   form button {

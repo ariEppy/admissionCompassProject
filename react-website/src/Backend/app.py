@@ -15,12 +15,12 @@ matplotlib.use('Agg')
 # Create a Flask application instance
 app = Flask(__name__)
 
-# Enable CORS for all routes, allowing requests from any origin
+
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Load the dataset and model
 df = pd.read_csv('student_data_final_testing.csv')
-# Mapping dictionary for degree types
+# Mapping for degree types
 degree_mapping = {'B.Sc.': 1, 'M.Sc.': 2, 'B.A.': 3, 'M.A.': 4}  # Assign 0 to represent unknown types
 # Convert string values to numeric
 df['Type'] = df['Type'].map(degree_mapping)
@@ -32,7 +32,7 @@ rf = pickle.load(open('rf.pkl', 'rb'))
 dt = pickle.load(open('dt.pkl', 'rb'))
 gaus = pickle.load(open('gaus.pkl', 'rb'))
 
-# Define a route for handling HTTP GET requests to the root URL
+# Define routes for handling requests
 @app.route('/', methods=['GET'])
 def get_data():
     data = {

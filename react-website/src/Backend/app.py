@@ -55,7 +55,7 @@ def predict():
         prediction3 = gaus.predict(query_df)
         prediction3 = list(map(int, prediction3))
 
-        accuracy_dt = 79.00
+        accuracy_dt = 80.00
         accuracy_rf = 84.00
         accuracy_gaus = 74.00
         total_accuracy = accuracy_dt + accuracy_rf + accuracy_gaus

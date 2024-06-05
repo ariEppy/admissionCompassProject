@@ -13,115 +13,91 @@
     margin-top: 10px;
 }
 .skills.html .green-bar {
-    background-color: #04AA6D;
+    background-color: #006CA9;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5px;
-    color: white;
+    color: #006CA9;
+}
+.circle-container0 {
+  width: 73.5%; 
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  margin-left: 190px;
 }
   .circle-container {
- 
-  width: 90%; 
-  }
-  .circle-container2 {
     display: flex;
+    
+    padding-top: 25px;
     align-items: center;
-  }
-  .circle1 {
-    background-color: #4CAF50;
-    padding-top: 10px;
-    position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  color: white;
-  font-size: 16px; 
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+   
 
   }
-  .circle2 {
-    background-color: #5c4caf;
-    padding-top: 10px;
+  .circle-container2 {
+    flex: 1;
+    
+  }
+  .circle1 {
+    background-color: #006CA9;
     position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  align-items: center;
-  color: white;
-  font-size: 16px; 
-   
+    border-radius: 50%;
+    color: white;
+    font-size: 16px; 
+    align-items: center;
+  }
+  .circle2 {
+    background-color: #006CA9;
+    position: relative;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px; 
+    align-items: center;
   }
   .circle3 {
-    background-color: #af4ca7;
-    padding-top: 10px;
+    background-color: #006CA9;
     position: relative;
-  width: 100px;
-  height: 100px;
-  margin-top: 10px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 16px; 
-    
+    border-radius: 50%;
+    color: white;
+    font-size: 16px; 
+    align-items: center;
   }
   .circle-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
   }
   .circle4 {
-    background-color: #af8b4c;
-    margin-top: 10px;
-    padding-top: 10px;
+    background-color: #006CA9;
     position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 16px; 
-    
+    border-radius: 50%;
+    color: white;
+    font-size: 16px; 
+    align-items: center;
   }
   .circle5 {
-    background-color: #aaaf4c;
-    padding-top: 10px;
-    margin-top: 10px;
+    background-color: #006CA9;
     position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 16px; 
+    border-radius: 50%;
+    color: white;
+    font-size: 16px; 
+    align-items: center;
   }
   .circle6 {
-    background-color: #af4c6f;
-    margin-top: 10px;
-    padding-top: 10px;
+    background-color: #006CA9;
     position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 16px; 
+    border-radius: 50%;
+    color: white;
+    font-size: 16px; 
+    align-items: center; 
   }
   .resultsstrip
   {
@@ -139,6 +115,9 @@
   .resultsouter {
     padding-left: 200px;
     padding-right: 200px;
+    background-color: #EFF1F5;
+    height:280px;
+    
     
   }
   .resultsouter2 {
@@ -146,11 +125,22 @@
     font-size: 50px;
     font-weight: 700;
     color:#143056;
+    width: 50%;
+    line-height: 50px;
+    
+  }
+  .resultsouter22 {
+    margin-top: 10px;
+    color:#143056;
+    width: 50%;
+    font-weight: bold;
+    font-size: 30px;
     
   }
   .resultsouter3 {
-   
+   margin-top: 10px;
     color:#143056;
+    width: 50%;
    
   }
 
@@ -162,17 +152,30 @@
     
   }
   .resultsouter5 {
-   
-  flex: 1;  
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex: 1; 
+    margin-top: 40px;
+    margin-right: 25px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
   }
   .resultsouter4 {
-  width: 95%;
-    padding: 10px;
+  width: 100%;
+ 
+  
    
   }
   .resultsouter4 p {
-    font-weight: bold;
+    padding-top: 10px;
     margin: 0;
+  }
+  .resultsouter5 p {
+   
+    margin: 0;
+    
+    
   }
   
 

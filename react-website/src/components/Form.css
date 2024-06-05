@@ -44,10 +44,10 @@
 }
 
 .result-item {
-  flex: 0 1 calc(33.33% - 10px); /* Adjust percentage and gap as needed */
-  background-color: #f0f0f0; /* Optional: for better visibility */
+  flex: 0 1 calc(33.33% - 10px); 
+  background-color: #ffffff; 
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   box-sizing: border-box;
   cursor: pointer;
 }

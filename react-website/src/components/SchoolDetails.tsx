@@ -210,7 +210,7 @@ const SchoolDetails: React.FC = () => {
 
       Plotly.newPlot("graph", featureImportances, {
         title: {
-          text: "<b>Most Influential Academic Factors for Acceptance were -</b>",
+          text: "<b>Most Important Academic Features for Acceptance</b>",
           x: 0.05,
           y: 0.9,
           font: {
@@ -245,6 +245,10 @@ const SchoolDetails: React.FC = () => {
         <div className="resultsouter2">
           {schoolData.length > 0 && schoolData[0].Name}
         </div>
+        <div className="resultsouter22">
+          {degreeData.length > 0 && degreeData[0].Name} -{" "}
+          {typeData.length > 0 && typeData[0].Type}
+        </div>
         <div className="resultsouter3">
           {schoolData.length > 0 && schoolData[0].Location}
         </div>
@@ -252,27 +256,44 @@ const SchoolDetails: React.FC = () => {
           {schoolData.length > 0 && schoolData[0].general_information}
         </div>
       </div>
-      {nameData.length > 0 && typeData.length > 0 && degreeData.length > 0 && (
-        <p
-          style={{
-            fontWeight: "bold",
-            paddingTop: "40px",
-            marginLeft: "200px",
-          }}
-        >
-          Accepted Students at {nameData[0].Name} Studying {degreeData[0].Name},{" "}
-          {typeData[0].Type} had -
-        </p>
-      )}
+
       <div className="resultsouter5a">
         <div className="resultsouter5">
+          <p style={{ fontWeight: "bold", paddingTop: "20px" }}>
+            Accepted Scores Ranges
+          </p>
+
           <div className="resultsouter4">
             {nameData.length > 0 &&
               typeData.length > 0 &&
               degreeData.length > 0 &&
-              table1.length > 0 && (
+              table1.length > 0 &&
+              table1[0].minAvgGrade != null && (
                 <div>
                   <p>Bagrut Averages</p>
+                  <div style={{ display: "flex" }}>
+                    <p
+                      style={{
+                        marginBottom: "-10px",
+                        marginLeft: `${table1[0].minAvgGrade - 5}%`,
+                        marginRight: `${
+                          table1[0].maxAvgGrade - table1[0].minAvgGrade
+                        }%`,
+                        fontSize: "14px",
+                      }}
+                    >
+                      {Math.floor(table1[0].minAvgGrade)}
+                    </p>
+                    <p
+                      style={{
+                        marginBottom: "-10px",
+
+                        fontSize: "14px",
+                      }}
+                    >
+                      {Math.floor(table1[0].maxAvgGrade)}
+                    </p>
+                  </div>
                   <div className="container">
                     <div
                       className="skills html"
@@ -292,8 +313,7 @@ const SchoolDetails: React.FC = () => {
                           }%`,
                         }}
                       >
-                        <span>{table1[0].minAvgGrade}</span>
-                        <span>{table1[0].maxAvgGrade}</span>
+                        <span>...</span>
                       </div>
                     </div>
                   </div>
@@ -304,9 +324,32 @@ const SchoolDetails: React.FC = () => {
             {nameData.length > 0 &&
               typeData.length > 0 &&
               degreeData.length > 0 &&
-              table2.length > 0 && (
+              table2.length > 0 &&
+              table2[0].minAvgGrade != null && (
                 <div>
                   <p>Psychometric Scores</p>
+                  <div style={{ display: "flex" }}>
+                    <p
+                      style={{
+                        marginBottom: "-10px",
+                        marginLeft: `${(table2[0].minAvgGrade - 200) / 6 - 5}%`,
+                        marginRight: `${
+                          (table2[0].maxAvgGrade - table2[0].minAvgGrade) / 6
+                        }%`,
+                        fontSize: "14px",
+                      }}
+                    >
+                      {table2[0].minAvgGrade}
+                    </p>
+                    <p
+                      style={{
+                        marginBottom: "-10px",
+                        fontSize: "14px",
+                      }}
+                    >
+                      {table2[0].maxAvgGrade}
+                    </p>
+                  </div>
                   <div className="container">
                     <div
                       className="skills html"
@@ -324,7 +367,7 @@ const SchoolDetails: React.FC = () => {
                           width: `${
                             (table2[0].maxAvgGrade - table2[0].minAvgGrade) / 6
                           }%`,
-                          backgroundColor: "#04AA6D",
+                          backgroundColor: "#006CA9",
                           height: "100%",
                           display: "flex",
                           justifyContent: "space-between",
@@ -332,8 +375,7 @@ const SchoolDetails: React.FC = () => {
                           padding: "0 5px",
                         }}
                       >
-                        <span>{table2[0].minAvgGrade}</span>
-                        <span>{table2[0].maxAvgGrade}</span>
+                        <span>...</span>
                       </div>
                     </div>
                   </div>
@@ -344,9 +386,33 @@ const SchoolDetails: React.FC = () => {
             {nameData.length > 0 &&
               typeData.length > 0 &&
               degreeData.length > 0 &&
-              table3.length > 0 && (
+              table3.length > 0 &&
+              table3[0].minAvgGrade != null && (
                 <div>
                   <p>Preparatory Courses Averages</p>
+                  <div style={{ display: "flex" }}>
+                    <p
+                      style={{
+                        marginBottom: "-10px",
+                        marginLeft: `${table3[0].minAvgGrade - 5}%`,
+                        marginRight: `${
+                          table3[0].maxAvgGrade - table3[0].minAvgGrade
+                        }%`,
+                        fontSize: "14px",
+                      }}
+                    >
+                      {Math.floor(table3[0].minAvgGrade)}
+                    </p>
+                    <p
+                      style={{
+                        marginBottom: "-10px",
+
+                        fontSize: "14px",
+                      }}
+                    >
+                      {Math.floor(table3[0].maxAvgGrade)}
+                    </p>
+                  </div>
                   <div className="container">
                     <div
                       className="skills html"
@@ -364,7 +430,7 @@ const SchoolDetails: React.FC = () => {
                           width: `${
                             table3[0].maxAvgGrade - table3[0].minAvgGrade
                           }%`,
-                          backgroundColor: "#04AA6D",
+                          backgroundColor: "#006CA9",
                           height: "100%",
                           display: "flex",
                           justifyContent: "space-between",
@@ -372,8 +438,7 @@ const SchoolDetails: React.FC = () => {
                           padding: "0 5px",
                         }}
                       >
-                        <span>{table3[0].minAvgGrade}</span>
-                        <span>{table3[0].maxAvgGrade}</span>
+                        <span>...</span>
                       </div>
                     </div>
                   </div>
@@ -384,9 +449,33 @@ const SchoolDetails: React.FC = () => {
             {nameData.length > 0 &&
               typeData.length > 0 &&
               degreeData.length > 0 &&
-              table4.length > 0 && (
+              table4.length > 0 &&
+              table4[0].minAvgGrade != null && (
                 <div>
                   <p>Academic Courses Averages</p>
+                  <div style={{ display: "flex" }}>
+                    <p
+                      style={{
+                        marginBottom: "-10px",
+                        marginLeft: `${table4[0].minAvgGrade - 5}%`,
+                        marginRight: `${
+                          table4[0].maxAvgGrade - table4[0].minAvgGrade
+                        }%`,
+                        fontSize: "14px",
+                      }}
+                    >
+                      {Math.floor(table4[0].minAvgGrade)}
+                    </p>
+                    <p
+                      style={{
+                        marginBottom: "-10px",
+
+                        fontSize: "14px",
+                      }}
+                    >
+                      {Math.floor(table4[0].maxAvgGrade)}
+                    </p>
+                  </div>
                   <div className="container">
                     <div
                       className="skills html"
@@ -404,7 +493,7 @@ const SchoolDetails: React.FC = () => {
                           width: `${
                             table4[0].maxAvgGrade - table4[0].minAvgGrade
                           }%`,
-                          backgroundColor: "#04AA6D",
+                          backgroundColor: "#006CA9",
                           height: "100%",
                           display: "flex",
                           justifyContent: "space-between",
@@ -412,8 +501,7 @@ const SchoolDetails: React.FC = () => {
                           padding: "0 5px",
                         }}
                       >
-                        <span>{table4[0].minAvgGrade}</span>
-                        <span>{table4[0].maxAvgGrade}</span>
+                        <span>...</span>
                       </div>
                     </div>
                   </div>
@@ -424,9 +512,33 @@ const SchoolDetails: React.FC = () => {
             {nameData.length > 0 &&
               typeData.length > 0 &&
               degreeData.length > 0 &&
-              table5.length > 0 && (
+              table5.length > 0 &&
+              table5[0].minAvgGrade != null && (
                 <div>
                   <p>Degree Averages</p>
+                  <div style={{ display: "flex" }}>
+                    <p
+                      style={{
+                        marginBottom: "-10px",
+                        marginLeft: `${table5[0].minAvgGrade - 5}%`,
+                        marginRight: `${
+                          table5[0].maxAvgGrade - table5[0].minAvgGrade
+                        }%`,
+                        fontSize: "14px",
+                      }}
+                    >
+                      {Math.floor(table5[0].minAvgGrade)}
+                    </p>
+                    <p
+                      style={{
+                        marginBottom: "-10px",
+
+                        fontSize: "14px",
+                      }}
+                    >
+                      {Math.floor(table5[0].maxAvgGrade)}
+                    </p>
+                  </div>
                   <div className="container">
                     <div
                       className="skills html"
@@ -444,7 +556,7 @@ const SchoolDetails: React.FC = () => {
                           width: `${
                             table5[0].maxAvgGrade - table5[0].minAvgGrade
                           }%`,
-                          backgroundColor: "#04AA6D",
+                          backgroundColor: "#006CA9",
                           height: "100%",
                           display: "flex",
                           justifyContent: "space-between",
@@ -452,8 +564,7 @@ const SchoolDetails: React.FC = () => {
                           padding: "0 5px",
                         }}
                       >
-                        <span>{table5[0].minAvgGrade}</span>
-                        <span>{table5[0].maxAvgGrade}</span>
+                        <span>...</span>
                       </div>
                     </div>
                   </div>
@@ -462,24 +573,47 @@ const SchoolDetails: React.FC = () => {
           </div>
         </div>
         <div className="resultsouter5">
+          <div
+            style={{
+              height: `100%`,
+              width: "100%",
+            }}
+            id="graph"
+          ></div>
+        </div>
+      </div>
+      <div>
+        <div className="circle-container0">
+          <div
+            style={{
+              fontWeight: "bold",
+              paddingTop: "20px",
+              paddingLeft: "20px",
+              display: "block",
+            }}
+          >
+            Overview of Academic Features Accepted Students had
+          </div>
           <div className="circle-container">
             {allStuff.length > 0 && allStuff[0].minAvgGrade > 0 && (
               <div className="circle-container2">
                 <div
                   className="circle1"
                   style={{
-                    width: `Math.min(${allStuff[0].minAvgGrade * 30}, 100)px`,
-                    height: `Math.min(${allStuff[0].minAvgGrade * 30}, 100)px`,
+                    width: `${Math.max(allStuff[0].minAvgGrade * 20, 100)}px`,
+                    height: `${Math.max(allStuff[0].minAvgGrade * 20, 100)}px`,
                   }}
                 >
                   <div className="circle-text">
-                    {Math.floor((allStuff[0].minAvgGrade / total) * 100)}%
+                    {Math.floor((allStuff[0].minAvgGrade / total) * 100)}% of
+                    Students
                   </div>
                 </div>
                 <div
                   style={{
-                    marginLeft: "10px",
-                    fontWeight: "bold",
+                    width: "60%",
+                    textAlign: "center",
+                    paddingTop: "10px",
                   }}
                 >
                   Bagrut, Psychometric, Preparatory Courses, Academic Courses,
@@ -492,20 +626,23 @@ const SchoolDetails: React.FC = () => {
                 <div
                   className="circle2"
                   style={{
-                    width: `Math.min(${bagrutOnly[0].minAvgGrade * 30}, 100)px`,
-                    height: `Math.min(${
-                      bagrutOnly[0].minAvgGrade * 30
-                    }, 100)px`,
+                    width: `${Math.max(bagrutOnly[0].minAvgGrade * 20, 100)}px`,
+                    height: `${Math.max(
+                      bagrutOnly[0].minAvgGrade * 20,
+                      100
+                    )}px`,
                   }}
                 >
                   <div className="circle-text">
-                    {Math.floor((bagrutOnly[0].minAvgGrade / total) * 100)}%
+                    {Math.floor((bagrutOnly[0].minAvgGrade / total) * 100)}% of
+                    Students
                   </div>
                 </div>
                 <div
                   style={{
-                    marginLeft: "10px",
-                    fontWeight: "bold",
+                    width: "60%",
+                    textAlign: "center",
+                    paddingTop: "10px",
                   }}
                 >
                   Bagrut
@@ -518,25 +655,28 @@ const SchoolDetails: React.FC = () => {
                   <div
                     className="circle3"
                     style={{
-                      width: `Math.min(${
-                        bagruPsyPrepOnly[0].minAvgGrade * 30
-                      }, 100)px`,
-                      height: `Math.min(${
-                        bagruPsyPrepOnly[0].minAvgGrade * 30
-                      }, 100)px`,
+                      width: `${Math.max(
+                        bagruPsyPrepOnly[0].minAvgGrade * 20,
+                        100
+                      )}px`,
+                      height: `${Math.max(
+                        bagruPsyPrepOnly[0].minAvgGrade * 20,
+                        100
+                      )}px`,
                     }}
                   >
                     <div className="circle-text">
                       {Math.floor(
                         (bagruPsyPrepOnly[0].minAvgGrade / total) * 100
                       )}
-                      %
+                      % of Students
                     </div>
                   </div>
                   <div
                     style={{
-                      marginLeft: "10px",
-                      fontWeight: "bold",
+                      width: "60%",
+                      textAlign: "center",
+                      paddingTop: "10px",
                     }}
                   >
                     {" "}
@@ -549,22 +689,26 @@ const SchoolDetails: React.FC = () => {
                 <div
                   className="circle4"
                   style={{
-                    width: `Math.min(${
-                      bagruPsyOnly[0].minAvgGrade * 30
-                    }, 100)px`,
-                    height: `Math.min(${
-                      bagruPsyOnly[0].minAvgGrade * 30
-                    }, 100)px`,
+                    width: `${Math.max(
+                      bagruPsyOnly[0].minAvgGrade * 20,
+                      100
+                    )}px`,
+                    height: `${Math.max(
+                      bagruPsyOnly[0].minAvgGrade * 20,
+                      100
+                    )}px`,
                   }}
                 >
                   <div className="circle-text">
                     {Math.floor((bagruPsyOnly[0].minAvgGrade / total) * 100)}%
+                    of Students
                   </div>
                 </div>
                 <div
                   style={{
-                    marginLeft: "10px",
-                    fontWeight: "bold",
+                    width: "60%",
+                    textAlign: "center",
+                    paddingTop: "10px",
                   }}
                 >
                   Bagrut and Psychometric
@@ -577,25 +721,28 @@ const SchoolDetails: React.FC = () => {
                   <div
                     className="circle5"
                     style={{
-                      width: `Math.min(${
-                        bagruAcaPrepOnly[0].minAvgGrade * 30
-                      }, 100)px`,
-                      height: `Math.min(${
-                        bagruAcaPrepOnly[0].minAvgGrade * 30
-                      }, 100)px`,
+                      width: `${Math.max(
+                        bagruAcaPrepOnly[0].minAvgGrade * 20,
+                        100
+                      )}px`,
+                      height: `${Math.max(
+                        bagruAcaPrepOnly[0].minAvgGrade * 20,
+                        100
+                      )}px`,
                     }}
                   >
                     <div className="circle-text">
                       {Math.floor(
                         (bagruAcaPrepOnly[0].minAvgGrade / total) * 100
                       )}
-                      %
+                      % of Students
                     </div>
                   </div>
                   <div
                     style={{
-                      marginLeft: "10px",
-                      fontWeight: "bold",
+                      width: "60%",
+                      textAlign: "center",
+                      paddingTop: "10px",
                     }}
                   >
                     Bagrut, Preparatory Courses, Academic Courses
@@ -608,25 +755,28 @@ const SchoolDetails: React.FC = () => {
                   <div
                     className="circle6"
                     style={{
-                      width: `Math.min(${
-                        bagruAcaDegPrepOnly[0].minAvgGrade * 30
-                      }, 100)px`,
-                      height: `Math.min(${
-                        bagruAcaDegPrepOnly[0].minAvgGrade * 30
-                      }, 100)px`,
+                      width: `${Math.max(
+                        bagruAcaDegPrepOnly[0].minAvgGrade * 20,
+                        100
+                      )}px`,
+                      height: `${Math.max(
+                        bagruAcaDegPrepOnly[0].minAvgGrade * 20,
+                        100
+                      )}px`,
                     }}
                   >
                     <div className="circle-text">
                       {Math.floor(
                         (bagruAcaDegPrepOnly[0].minAvgGrade / total) * 100
                       )}
-                      %
+                      % of Students
                     </div>
                   </div>
                   <div
                     style={{
-                      marginLeft: "10px",
-                      fontWeight: "bold",
+                      width: "60%",
+                      textAlign: "center",
+                      paddingTop: "10px",
                     }}
                   >
                     Bagrut, Preparatory Courses, Academic Courses, and Degree
@@ -636,15 +786,6 @@ const SchoolDetails: React.FC = () => {
           </div>
         </div>
       </div>
-
-      <div
-        style={{
-          height: `100%`,
-          width: "80%",
-          paddingLeft: "140px",
-        }}
-        id="graph"
-      ></div>
     </div>
   );
 };

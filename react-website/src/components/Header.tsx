@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <header>
       <h1>
-        <img src=".\accept.jpg" alt="Admission Compass Logo" className="logo" />
+        <img src=".\accept.jpg" alt="logo" className="logo" />
         <Link to="/" className="home-link">
           Admission Compass
         </Link>

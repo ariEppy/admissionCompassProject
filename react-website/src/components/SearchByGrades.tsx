@@ -1169,7 +1169,16 @@ const SearchByGrades: React.FC = () => {
         </button>
       </form>
       <br />
-      <div className="text-center">
+      <div
+        className="text-center"
+        style={{
+          backgroundColor: "#006CA9",
+          color: "white",
+          width: "91.5%",
+          height: "100px",
+          alignContent: "center",
+        }}
+      >
         <h4>
           {showSpan && (
             <span id="prediction">
